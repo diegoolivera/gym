@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { RegistroComponent } from './registro/registro.component';
 import { HeaderComponent } from './header/header.component';
 import { CardComponent } from './card/card.component';
+import { BuscadorComponent } from './buscador/buscador.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistroComponent,
     HeaderComponent,
-    CardComponent
+    CardComponent,
+    BuscadorComponent
   ],
   imports: [
     BrowserModule

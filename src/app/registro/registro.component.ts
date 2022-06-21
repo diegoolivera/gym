@@ -5,6 +5,7 @@ import {
   Output,
   ViewChild,
 } from '@angular/core';
+import { __core_private_testing_placeholder__ } from '@angular/core/testing';
 import { Cliente } from 'src/assets/class/Cliente.model';
 
 @Component({
@@ -34,5 +35,11 @@ export class RegistroComponent {
     }
     let newCliente = new Cliente(nombreCliente, apellidoCliente, planCliente);
     this.clientEmiter.emit(newCliente);
+  }
+
+  limpiarCampos(){
+    this.nombreCliente.nativeElement.value = null
+    this.apellidoCliente.nativeElement.value = null
+    this.planCliente.nativeElement.value = "General"
   }
 }
