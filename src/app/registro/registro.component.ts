@@ -1,4 +1,10 @@
-import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  EventEmitter,
+  Output,
+  ViewChild,
+} from '@angular/core';
 import { Cliente } from 'src/assets/class/Cliente.model';
 
 @Component({
@@ -8,20 +14,25 @@ import { Cliente } from 'src/assets/class/Cliente.model';
 })
 export class RegistroComponent {
   //enviar la info al componente padre
-  @Output() clientEmiter = new EventEmitter<Cliente>()
+  @Output() clientEmiter = new EventEmitter<Cliente>();
 
   @ViewChild('nombreInput') nombreCliente: ElementRef;
   @ViewChild('apellidoInput') apellidoCliente: ElementRef;
   @ViewChild('planInput') planCliente: ElementRef;
 
-
   crearCliente() {
-
-    let newCliente = new Cliente(
-      this.nombreCliente.nativeElement.value,
-      this.apellidoCliente.nativeElement.value,
-      this.planCliente.nativeElement.value
-    );
-    this.clientEmiter.emit(newCliente)
+    let nombreCliente = this.nombreCliente.nativeElement.value;
+    let apellidoCliente = this.apellidoCliente.nativeElement.value;
+    let planCliente = this.planCliente.nativeElement.value;
+    if (
+      nombreCliente === ' ' ||
+      apellidoCliente === '' ||
+      planCliente === ' '
+    ) {
+      alert('complete todos los campos');
+      return;
+    }
+    let newCliente = new Cliente(nombreCliente, apellidoCliente, planCliente);
+    this.clientEmiter.emit(newCliente);
   }
 }
