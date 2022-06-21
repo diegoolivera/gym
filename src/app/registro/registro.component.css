@@ -1,0 +1,50 @@
+form{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+form input{
+  margin-bottom: 20px;
+  width: 150px;
+  height: 25px;
+  padding: 5px;
+}
+
+select{
+  width: 150px;
+  height: 25px;
+  text-align: center;
+}
+
+.titulo{
+  margin-top: 20px;
+  text-align: center;
+  font-size: 25px;
+}
+.contentBotones{
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 15%;
+}
+
+.btn{
+  border-style: none;
+  padding: 7px 10px;
+  border-radius: 4px;
+  color: #eee;
+  cursor: pointer;
+}
+
+.danger{
+  background-color: #df4759;
+}
+
+.pass{
+  background-color: rgb(25, 136, 215);
+}

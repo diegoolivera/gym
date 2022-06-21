@@ -1,0 +1,15 @@
+<p class="titulo">Registro Cliente</p>
+
+<form (click)="$event.preventDefault()">
+  <input type="text" placeholder="Ingrese Nombre" #nombreInput />
+  <input type="text" placeholder="Ingrese Apellido" #apellidoInput />
+  <select #planInput>
+    <option selected disabled>Plan</option>
+    <option value="General">General</option>
+    <option value="Premium">Premium</option>
+  </select>
+  <div class="contentBotones">
+    <button class="btn pass" (click)="crearCliente()">Registrar</button>
+    <button class="btn danger">Borrar</button>
+  </div>
+</form>

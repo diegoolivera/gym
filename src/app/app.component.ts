@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Cliente } from 'src/assets/class/Cliente.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'gym';
+  clientes:Cliente[] = [new Cliente("Diego","Olivera","Premium"),new Cliente("Ana","Lopez","General")]
+
+  agregarCliente(newCliente:Cliente){
+    this.clientes.push(newCliente)
+  }
+
+  borrarCliente(id:number){
+    this.clientes = this.clientes.filter((c,i) => i !== id)
+  }
 }
