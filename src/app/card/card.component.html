@@ -1,5 +1,5 @@
 <article>
-  <header><p>{{cliente.plan}}</p></header>
+  <header [ngClass]="cliente.plan === 'Premium'? 'premium': 'general'"><p>{{cliente.plan}}</p></header>
   <main>
     <p>{{cliente.nombre}} {{cliente.apellido}}</p>
   </main>

@@ -8,6 +8,8 @@ article{
 header{
   text-align: center;
   font-size: 20px;
+  background-color: #000000;
+  color: #eee;
 }
 
 header p{
@@ -40,5 +42,16 @@ footer button{
   border-radius: 3px;
   cursor: pointer;
 }
+
+.premium{
+  background-color: #000000;
+  color: #ffd700;
+}
+
+.general{
+  background-color: #000000;
+  color: #BEBEBE;
+}
+
 
 
