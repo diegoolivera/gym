@@ -7,7 +7,7 @@ import { Cliente } from 'src/assets/class/Cliente.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  clientes:Cliente[] = [new Cliente("Diego","Olivera","Premium"),new Cliente("Ana","Lopez","General")]
+  clientes:Cliente[] = []
   filtrado:Cliente[] = [...this.clientes];
 
   agregarCliente(newCliente:Cliente){

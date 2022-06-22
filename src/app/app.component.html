@@ -3,7 +3,11 @@
 <div class="contentBuscador">
   <Buscador (filtro)="filtrar($event)"></Buscador>
 </div>
+<div class="contentMsg" *ngIf="clientes.length === 0">
+  <p>NO HAY CLIENTES</p>
+</div>
 <div class="contentCards">
+
   <Card *ngFor="let c of filtrado; let i = index"
     [cliente]="c"
     [i]="i"
