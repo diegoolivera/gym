@@ -1,7 +1,10 @@
 <Header></Header>
 <Registro (clientEmiter)="agregarCliente($event)"></Registro>
+<div class="contentBuscador">
+  <Buscador (filtro)="filtrar($event)"></Buscador>
+</div>
 <div class="contentCards">
-  <Card *ngFor="let c of clientes; let i = index"
+  <Card *ngFor="let c of filtrado; let i = index"
     [cliente]="c"
     [i]="i"
     (idCliente)= "borrarCliente(i)">

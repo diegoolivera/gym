@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Output, ViewChild} from '@angular/core';
 
 @Component({
-  selector: 'app-buscador',
+  selector: 'Buscador',
   templateUrl: './buscador.component.html',
   styleUrls: ['./buscador.component.css']
 })
-export class BuscadorComponent implements OnInit {
+export class BuscadorComponent {
 
-  constructor() { }
+  @ViewChild("filtro") inputFiltro:ElementRef
+  @Output() filtro = new EventEmitter<string>()
 
-  ngOnInit(): void {
+  nuevoFiltro(){
+    this.filtro.emit(this.inputFiltro.nativeElement.value)
   }
+
+
+
 
 }
